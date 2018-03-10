@@ -1,22 +1,63 @@
-# Compiled class file
+*.iml
+.gradle
+.idea
+build
+gradle
+local.properties
+gradle.properties
+gradlew
+gradlew.bat
+define.gradle
+
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+
+build/
+app/build/
+swipeMenuListView/build/
+local.properties
+.gradle/
+.idea/
+
+### yaowen add those from  stackoverflow answer : 20150773  :start
+### http://stackoverflow.com/questions/16736856/what-should-be-in-my-gitignore-for-an-android-studio-project
+
+.DS_Store
+
+#built application files
+*.apk
+*.ap_
+# files for the dex VM
+*.dex
+# Java class files
 *.class
+# generated files
+bin/
+gen/
 
-# Log file
-*.log
+# Windows thumbnail db
+Thumbs.db
+# OSX files
+.DS_Store
+# Eclipse project files
+.classpath
+.project
+# Android Studio
+*.iml
+.idea
+#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.
+###yaowen add those from  stackoverflow answer : 20150773  :end
 
-# BlueJ files
-*.ctxt
+## word  file
+~$*.doc
+~$*.docx
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+##for release signature  apk
+app/app-release.apk
+~$*.apk
