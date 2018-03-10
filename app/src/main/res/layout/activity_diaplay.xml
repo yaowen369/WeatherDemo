@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yaoxiaowen.weatherdemo.display.DiaplayActivity">
+
+    <EditText
+        android:id="@+id/cityEt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="输入查询的城市名"
+        />
+
+    <Button
+        android:id="@+id/queryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="查询"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/dateTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="2018-03-10"
+        />
+
+
+    <TextView
+        android:id="@+id/windTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="东南风微风"
+        />
+
+    <TextView
+        android:id="@+id/weatherInfoTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小雨"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/localImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/wether_ico00"
+        />
+
+    <ImageView
+        android:id="@+id/urlImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/wether_ico00"
+        />
+
+</LinearLayout>
