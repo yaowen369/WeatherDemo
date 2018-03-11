@@ -12,7 +12,7 @@ import com.yaoxiaowen.weatherdemo.base.BaseView;
  * www.yaoxiaowen.com
  */
 
-public interface IDisplayInterface {
+public interface IDisplayContract {
 
     interface IDisplayView extends BaseView{
         void displayData(String date);
@@ -22,14 +22,19 @@ public interface IDisplayInterface {
         void displayUrlImage(String url);
     }
 
-    interface IDisplayMode extends BaseModel{
+    interface IDisplayModel extends BaseModel{
         void onQuery(String cityName);
-        //Todo  这个里面的参数如何设置呢
-        void onSuccess();
     }
 
     interface IDisplayPresenter extends BasePresenter{
         void query(String cityName);
+        boolean verifyCityName(String cityName);
+    }
+
+
+    interface ModelCallBack<T>{
+        void onsuccess(T data);
+        void onFail(String code);
     }
 
 }

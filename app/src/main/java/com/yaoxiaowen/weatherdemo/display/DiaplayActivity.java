@@ -2,19 +2,23 @@ package com.yaoxiaowen.weatherdemo.display;
 
 
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import butterknife.BindView;
+import butterknife.OnClick;
 
 import com.yaoxiaowen.weatherdemo.R;
 import com.yaoxiaowen.weatherdemo.base.BaseActivity;
 
-import butterknife.BindView;
 
-public class DiaplayActivity extends BaseActivity implements IDisplayInterface.IDisplayView {
+
+public class DiaplayActivity extends BaseActivity implements IDisplayContract.IDisplayView {
 
     public static final String TAG = "DiaplayActivity";
 
-    private IDisplayInterface.IDisplayPresenter presenter = null;
+    private IDisplayContract.IDisplayPresenter presenter = null;
 
     @BindView(R.id.cityEt)
     TextView cityEt;
@@ -38,7 +42,7 @@ public class DiaplayActivity extends BaseActivity implements IDisplayInterface.I
 
     @Override
     protected void initData() {
-
+        presenter = new DisplayPresenter(this);
     }
 
     @Override
@@ -49,6 +53,19 @@ public class DiaplayActivity extends BaseActivity implements IDisplayInterface.I
     @Override
     protected void initListener() {
 
+    }
+
+
+    @OnClick(R.id.queryBtn)
+    public void onQueryClick(View view){
+        String cityName = cityEt.getText().toString().trim();
+
+        //Todo 测试数据 ，虚拟机的模拟键盘太恶心了
+        cityName = "杭州";
+
+        if (presenter.verifyCityName(cityName)){
+            presenter.query(cityName);
+        }
     }
 
 

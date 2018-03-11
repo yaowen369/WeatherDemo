@@ -42,7 +42,7 @@
         android:id="@+id/weatherInfoTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="小雨"
+        tools:text="小雨"
         android:layout_marginBottom="10dp"
         />
 
